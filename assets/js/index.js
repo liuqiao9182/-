@@ -37,6 +37,8 @@ function touxiang(user) {
     } else {
         $('.layui-nav-img').hide()
         var first = name[0].toUpperCase()
-        $('#welcome').html(first).show()
+        console.log(first);
+        $('.logo_two').html(first)
+        $('#welcome').show()
     }
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>更改密码</title>
+    <link rel="stylesheet" href="">
+    <!-- 导入layui的css -->
+    <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
+    <!-- 导入自己css -->
+
+</head>
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">修改用户密码</div>
+        <div class="layui-card-body">
+            <form class="layui-form" lay-filter="formuserinfo">
+              <!-- 隐藏域 -->
+                    <!-- 登录名称 -->
+                 <label class="layui-form-label">密码</label>
+                  <div class="layui-input-block" readonly>
+                    <input type="password" name="username" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                  </div>
+                </div>
+                <!-- 用户昵称 -->
+                <div class="layui-form-item">
+                    <label class="layui-form-label">新密码</label>
+                     <div class="layui-input-block">
+                       <input type="password" name="nickname" required  lay-verify="required|nickname" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                     </div>
+                   </div>
+                   <!-- 登录密码 -->
+                   <div class="layui-form-item">
+                    <label class="layui-form-label pass" lay-verify="pass|">确认密码</label>
+                     <div class="layui-input-block">
+                       <input type="password" name="email" required  lay-verify="required|email" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                     </div>
+                   </div>
+                   <!-- 提交按钮 -->
+                   <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary" id="btnreset">重置</button>
+                  </div>
+            </form>
+        </div>
+      </div>
+</body>
+</html>
