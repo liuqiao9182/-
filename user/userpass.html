@@ -4,36 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>更改密码</title>
-    <link rel="stylesheet" href="">
+   
     <!-- 导入layui的css -->
     <link rel="stylesheet" href="../assets/lib/layui/css/layui.css">
     <!-- 导入自己css -->
-
+    <link rel="stylesheet" href="../assets/css/userpassworld.css">
 </head>
 <body>
     <div class="layui-card">
         <div class="layui-card-header">修改用户密码</div>
         <div class="layui-card-body">
             <form class="layui-form" lay-filter="formuserinfo">
-              <!-- 隐藏域 -->
-                    <!-- 登录名称 -->
+                 <!-- 登录密码 -->
+                 <div class="layui-form-item">
                  <label class="layui-form-label">密码</label>
                   <div class="layui-input-block" readonly>
-                    <input type="password" name="username" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    <input type="password" required  lay-verify="pass" placeholder="请输入标题" autocomplete="off" class="layui-input" id="oldpass">
                   </div>
                 </div>
-                <!-- 用户昵称 -->
+                <!-- 新密码 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">新密码</label>
                      <div class="layui-input-block">
-                       <input type="password" name="nickname" required  lay-verify="required|nickname" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                       <input type="password" name="nickname" required  lay-verify="pass|repassworld" placeholder="请输入标题" autocomplete="off" class="layui-input">
                      </div>
                    </div>
-                   <!-- 登录密码 -->
+                   <!-- 确认密码 -->
                    <div class="layui-form-item">
-                    <label class="layui-form-label pass" lay-verify="pass|">确认密码</label>
+                    <label class="layui-form-label pass" lay-verify="lastpass">确认密码</label>
                      <div class="layui-input-block">
-                       <input type="password" name="email" required  lay-verify="required|email" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                       <input type="password" id="lastpassworld" required  lay-verify="pass|lastpass" placeholder="请输入标题" autocomplete="off" class="layui-input">
                      </div>
                    </div>
                    <!-- 提交按钮 -->
@@ -44,5 +44,8 @@
             </form>
         </div>
       </div>
+          <script src="../assets/lib/layui/layui.all.js"></script>
+          <script src="../assets/lib/jquery.js"></script>
+          <script src="../assets/js/herpass.js"></script>
 </body>
 </html>
