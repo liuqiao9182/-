@@ -25,17 +25,6 @@ function userdata() {
             }
             touxiang(res.data)
         },
-        // 防止用户直接访问index页面，利用ajax每次访问时都会有
-        // compelet属性的返回值
-        complete:function(res){
-            console.log(res);
-            if(res.responseJSON.status ==1 && res.responseJSON.message=="身份认证失败！"){
-                // 清空浏览器的localStorage
-            localStorage.removeItem('token')
-            // 强制跳转login页面
-            location.href = "./login.html"    
-            }
-        }
     });
 }
 // 判断头像
