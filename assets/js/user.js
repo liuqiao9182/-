@@ -40,7 +40,7 @@ $(function(){
           return layer.msg(res.message)
         }
           window.parent.userdata()
-          window.parent.userdata()
+          // window.parent.userdata()
       }
     });
   });
