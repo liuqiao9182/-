@@ -12,24 +12,43 @@ $(function(){
             }
         } ,
         lastpass:function(use){
-            if( use !== $('#lastpassworld').val()){
+            if( use !== $('#newpassworld').val()){
                return '两次密码输入不一致'
             }
         } 
        });
-    //    运用ajax更改
-    $('.layui-btn').submit(function (e) { 
+    //    运用ajax更改密码
+    // $('.layui-form').submit(function (e) { 
+    //     e.preventDefault();
+    //     $.ajax({
+    //         type: "POST",
+    //         url: "/my/updatepwd",
+    //         data: $(this).serialize(),
+    //         success: function (res) {
+    //           if(res.status !== 0){
+    //               return  layui.layer.msg('更改密码失败')
+    //           } 
+    //           console.log('更改密码成功');
+    //           layui.layer.msg('更改密码成功')
+    //         //   $('.layui-form')[0].reset() 
+    //         }
+    //     });
+    // });
+
+    $('.layui-form').on('submit',function(e){
         e.preventDefault();
         $.ajax({
             type: "POST",
             url: "/my/updatepwd",
             data: $(this).serialize(),
             success: function (res) {
-              if(res.status !==0){
-                  return layer.msg(res.message)
+              if(res.status !== 0){
+                  return  layui.layer.msg('更改密码失败')
               } 
+              console.log('更改密码成功');
+              layui.layer.msg('更改密码成功')
               $('.layui-form')[0].reset() 
             }
         });
-    });
+    })
 })

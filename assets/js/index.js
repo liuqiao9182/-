@@ -19,7 +19,6 @@ function userdata() {
         type: "GET",
         url: "/my/userinfo",
         success: function (res) {
-            console.log(res);
             if (res.status !== 0) {
                 return layui.layer.msg('获取用化信息失败')
             }
@@ -30,14 +29,14 @@ function userdata() {
 // 判断头像
 function touxiang(user) {
     var name = user.nickname || user.username
-    $('#welcome').html(`欢迎${name}`)
+    $('#welcome').html(`欢迎 ${name}`)
     if (user.user_pic !== null) {
-        $('#welcome').hide()
+        $('.logo_two').hide()
         $('.layui-nav-img').attr('src', user.user_pic).show()
     } else {
+        console.log(222);
         $('.layui-nav-img').hide()
         var first = name[0].toUpperCase()
-        console.log(first);
         $('.logo_two').html(first)
         $('#welcome').show()
     }

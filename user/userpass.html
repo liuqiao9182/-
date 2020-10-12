@@ -19,26 +19,26 @@
                  <div class="layui-form-item">
                  <label class="layui-form-label">密码</label>
                   <div class="layui-input-block" readonly>
-                    <input type="password" required  lay-verify="pass" placeholder="请输入标题" autocomplete="off" class="layui-input" id="oldpass">
+                    <input type="password" required  lay-verify="pass" placeholder="请输入密码" autocomplete="off" class="layui-input" id="oldpass">
                   </div>
                 </div>
                 <!-- 新密码 -->
                 <div class="layui-form-item">
                     <label class="layui-form-label">新密码</label>
                      <div class="layui-input-block">
-                       <input type="password" name="nickname" required  lay-verify="pass|repassworld" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                       <input type="password" required  lay-verify="pass|repassworld" placeholder="请输入新密码" autocomplete="off" class="layui-input" id="newpassworld">
                      </div>
                    </div>
                    <!-- 确认密码 -->
                    <div class="layui-form-item">
-                    <label class="layui-form-label pass" lay-verify="lastpass">确认密码</label>
+                    <label class="layui-form-label">确认新密码</label>
                      <div class="layui-input-block">
                        <input type="password" id="lastpassworld" required  lay-verify="pass|lastpass" placeholder="请输入标题" autocomplete="off" class="layui-input">
                      </div>
                    </div>
                    <!-- 提交按钮 -->
                    <div class="layui-input-block">
-                    <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+                    <button class="layui-btn" lay-submit lay-filter="formDemo" id="present">立即提交</button>
                     <button type="reset" class="layui-btn layui-btn-primary" id="btnreset">重置</button>
                   </div>
             </form>
@@ -46,6 +46,7 @@
       </div>
           <script src="../assets/lib/layui/layui.all.js"></script>
           <script src="../assets/lib/jquery.js"></script>
+          <script src="../assets/js/baseapi.js"></script>
           <script src="../assets/js/herpass.js"></script>
 </body>
 </html>
